@@ -153,6 +153,74 @@ h1{font-size:clamp(58px,7vw,112px);font-weight:400;line-height:.78;letter-spacin
 }
 </style>
 
+
+<style id="mobile-final-fix">
+@media (max-width: 700px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .hero {
+    min-height: 100svh;
+    min-height: 100vh;
+  }
+  .hero-copy {
+    width: min(88vw, 430px);
+    max-width: 88vw;
+  }
+  .hero-copy h1 {
+    font-size: clamp(52px, 15vw, 78px);
+    line-height: .79;
+    letter-spacing: -.055em;
+    white-space: normal;
+  }
+  .hero-copy h1 .the-word,
+  .hero-copy h1 .slim-word,
+  .hero-copy h1 .experience-word {
+    display: block;
+  }
+  .hero-copy h1 .slim-word {
+    font-size: 1.12em;
+    margin-left: .08em;
+    margin-top: -.015em;
+    margin-bottom: -.015em;
+  }
+  .video-section {
+    padding: 72px 5vw 80px;
+  }
+  .video-head {
+    display: block;
+    max-width: none;
+    margin-bottom: 24px;
+  }
+  .video-head h2 {
+    font-size: clamp(38px, 10.5vw, 58px);
+    line-height: .94;
+  }
+  .video-head p {
+    margin-top: 16px;
+    font-size: 10px;
+    letter-spacing: .14em;
+  }
+  .video-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 0;
+  }
+  .video-frame video {
+    object-fit: contain;
+    background: #000;
+  }
+  nav, .nav, .header, header {
+    max-width: 100%;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="header">
@@ -216,3 +284,4 @@ h1{font-size:clamp(58px,7vw,112px);font-weight:400;line-height:.78;letter-spacin
 
 </body>
 </html>
+
