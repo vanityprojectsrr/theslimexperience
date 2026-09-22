@@ -221,6 +221,86 @@ h1{font-size:clamp(58px,7vw,112px);font-weight:400;line-height:.78;letter-spacin
 }
 </style>
 
+
+<style id="mobile-actual-fix">
+@media (max-width: 700px) {
+  html, body { overflow-x:hidden; width:100%; }
+  .hero {
+    display:flex !important;
+    flex-direction:column !important;
+    min-height:auto !important;
+    height:auto !important;
+    padding-top:66px;
+    overflow:hidden;
+  }
+  .hero-image {
+    position:relative !important;
+    inset:auto !important;
+    width:100% !important;
+    height:56svh !important;
+    min-height:420px !important;
+    max-height:560px !important;
+    flex:none !important;
+    opacity:1 !important;
+    background-position:center top !important;
+  }
+  .hero-image:after {
+    background:linear-gradient(180deg,rgba(5,5,5,0) 55%,#050505 100%) !important;
+  }
+  .hero-copy {
+    position:relative !important;
+    z-index:3 !important;
+    width:100% !important;
+    max-width:none !important;
+    min-height:auto !important;
+    padding:20px 6vw 72px !important;
+    display:block !important;
+    margin:0 !important;
+  }
+  .kicker {
+    font-size:8px !important;
+    letter-spacing:.34em !important;
+    line-height:1.6 !important;
+    margin-bottom:20px !important;
+    color:var(--gold2) !important;
+  }
+  .hero-copy h1 {
+    font-size:clamp(48px,13.2vw,62px) !important;
+    line-height:.82 !important;
+    letter-spacing:-.055em !important;
+    white-space:normal !important;
+  }
+  .hero-copy h1 span { display:block !important; }
+  .hero-copy h1 .word-the { margin:0 !important; }
+  .hero-copy h1 .word-slim {
+    font-size:1.12em !important;
+    margin:-.02em 0 -.01em .08em !important;
+  }
+  .hero-copy h1 .word-experience { margin:0 !important; }
+  .hero-rule { width:70px !important; margin:26px 0 18px !important; }
+  .hero-description {
+    max-width:100% !important;
+    font-size:11px !important;
+    line-height:1.8 !important;
+  }
+  .hero-meta {
+    gap:20px !important;
+    margin-top:28px !important;
+    padding-top:18px !important;
+    max-width:100% !important;
+  }
+  .meta strong { font-size:21px !important; }
+  .meta span { font-size:7px !important; }
+  .cta-row {
+    flex-wrap:wrap !important;
+    margin-top:28px !important;
+  }
+  .hero-side, .hero-scroll { display:none !important; }
+  .video-section { padding:64px 6vw 76px !important; }
+  .video-head h2 { font-size:clamp(38px,10vw,52px) !important; }
+  .video-wrap { width:100% !important; }
+}
+</style>
 </head>
 <body>
 <header class="header">
@@ -284,4 +364,5 @@ h1{font-size:clamp(58px,7vw,112px);font-weight:400;line-height:.78;letter-spacin
 
 </body>
 </html>
+
 
