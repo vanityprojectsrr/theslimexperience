@@ -80,12 +80,12 @@ h1{font-size:clamp(58px,7vw,112px);font-weight:400;line-height:.78;letter-spacin
 .hero-copy h1 {
   line-height: .78;
 }
-.hero-copy h1 .the-word,
-.hero-copy h1 .slim-word,
-.hero-copy h1 .experience-word {
+.hero-copy h1 .word-the,
+.hero-copy h1 .word-slim,
+.hero-copy h1 .word-experience {
   display: block;
 }
-.hero-copy h1 .slim-word {
+.hero-copy h1 .word-slim {
   color: var(--gold);
   font-style: italic;
   font-size: 1.18em;
@@ -93,8 +93,8 @@ h1{font-size:clamp(58px,7vw,112px);font-weight:400;line-height:.78;letter-spacin
   margin-bottom: -.025em;
   margin-left: .16em;
 }
-.hero-copy h1 .the-word,
-.hero-copy h1 .experience-word {
+.hero-copy h1 .word-the,
+.hero-copy h1 .word-experience {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -146,7 +146,7 @@ h1{font-size:clamp(58px,7vw,112px);font-weight:400;line-height:.78;letter-spacin
 }
 @media (max-width: 700px) {
   .hero-copy h1 { line-height: .8; }
-  .hero-copy h1 .slim-word { font-size: 1.13em; margin-left: .1em; }
+  .hero-copy h1 .word-slim { font-size: 1.13em; margin-left: .1em; }
   .video-section { padding: 0 6vw 80px; }
   .video-head { display: block; margin-bottom: 24px; }
   .video-head p { margin-top: 18px; }
@@ -154,159 +154,128 @@ h1{font-size:clamp(58px,7vw,112px);font-weight:400;line-height:.78;letter-spacin
 </style>
 
 
-<style id="mobile-final-fix">
-@media (max-width: 700px) {
-  html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  .hero {
-    min-height: 100svh;
-    min-height: 100vh;
-  }
-  .hero-copy {
-    width: min(88vw, 430px);
-    max-width: 88vw;
-  }
-  .hero-copy h1 {
-    font-size: clamp(52px, 15vw, 78px);
-    line-height: .79;
-    letter-spacing: -.055em;
-    white-space: normal;
-  }
-  .hero-copy h1 .the-word,
-  .hero-copy h1 .slim-word,
-  .hero-copy h1 .experience-word {
-    display: block;
-  }
-  .hero-copy h1 .slim-word {
-    font-size: 1.12em;
-    margin-left: .08em;
-    margin-top: -.015em;
-    margin-bottom: -.015em;
-  }
-  .video-section {
-    padding: 72px 5vw 80px;
-  }
-  .video-head {
-    display: block;
-    max-width: none;
-    margin-bottom: 24px;
-  }
-  .video-head h2 {
-    font-size: clamp(38px, 10.5vw, 58px);
-    line-height: .94;
-  }
-  .video-head p {
-    margin-top: 16px;
-    font-size: 10px;
-    letter-spacing: .14em;
-  }
-  .video-frame {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 0;
-  }
-  .video-frame video {
-    object-fit: contain;
-    background: #000;
-  }
-  nav, .nav, .header, header {
-    max-width: 100%;
-  }
-  img {
-    max-width: 100%;
-  }
+
+<style id="signup-section">
+.signup-section{border-top:1px solid var(--line);padding:95px 8vw 100px;background:#080808}
+.signup-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1.15fr;gap:8vw;align-items:center}
+.signup-copy h2{font-size:clamp(42px,5vw,72px);font-weight:400;line-height:.92;letter-spacing:-.045em;margin:0}
+.signup-copy h2 em{color:var(--gold);font-style:italic}
+.signup-copy p{max-width:420px;margin-top:24px;font-size:16px;line-height:1.7;color:#999}
+.brevo-form-wrap{width:100%;display:flex;justify-content:center;align-items:center}
+.slim-brevo{width:100%;max-width:620px;background:transparent!important;border:0!important;margin:0!important;padding:0!important;text-align:left}
+.slim-brevo form{width:100%;margin:0;padding:0;background:transparent!important;border:0!important}
+.slim-form-heading{font:600 11px/1 "Courier New",monospace;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.slim-form-subheading{font:400 20px/1.35 Georgia,"Times New Roman",serif;color:#f3eee4;margin-bottom:28px;max-width:560px}
+.slim-form-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:stretch}
+.slim-email-block,.slim-submit-block{padding:0!important;margin:0!important}
+.slim-email-block .form__entry{margin:0!important}
+.slim-hidden-label{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.slim-brevo .entry__field{border:1px solid #383838!important;border-radius:0!important;background:#0d0d0d!important;height:58px!important;box-shadow:none!important}
+.slim-brevo .entry__field:focus-within{border-color:var(--gold)!important}
+.slim-brevo input.input{width:100%!important;height:56px!important;border:0!important;outline:0!important;background:transparent!important;color:#fff!important;font:11px "Courier New",monospace!important;letter-spacing:.16em!important;padding:0 18px!important;box-shadow:none!important}
+.slim-brevo input.input::placeholder{color:#777!important;opacity:1!important;font:11px "Courier New",monospace!important;letter-spacing:.16em!important}
+.slim-submit-block button{height:58px!important;border:1px solid var(--gold)!important;border-radius:0!important;background:var(--gold)!important;color:#050505!important;padding:0 23px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;white-space:nowrap!important;font:700 10px "Courier New",monospace!important;letter-spacing:.14em!important;text-transform:uppercase!important;cursor:pointer!important;transition:all .2s ease!important}
+.slim-submit-block button:hover{background:var(--gold2)!important;border-color:var(--gold2)!important;transform:translateY(-1px)}
+.slim-submit-block button svg{width:14px!important;height:14px!important;display:none!important}
+.slim-form-note{margin-top:13px;color:#666;font:9px/1.5 "Courier New",monospace;letter-spacing:.06em}
+.slim-field-error{display:block!important;margin-top:8px!important;padding:0!important;background:transparent!important;border:0!important;color:#d98d8d!important;font:10px "Courier New",monospace!important}
+.slim-brevo-message{display:none!important;margin:0 0 20px!important;padding:18px!important;border-radius:0!important;border:1px solid var(--gold)!important;background:#0d0d0d!important;color:#f3eee4!important;font:11px/1.5 "Courier New",monospace!important;max-width:none!important;text-align:left!important}
+.slim-brevo-message .sib-form-message-panel__text{padding:0!important}
+.slim-brevo-message .sib-form-message-panel__inner-text{color:inherit!important}
+.slim-brevo .entry__specification{display:none!important}
+@media(max-width:800px){
+  .signup-section{padding:75px 18px 80px}
+  .signup-inner{grid-template-columns:1fr;gap:38px}
+  .signup-copy p{font-size:15px}
+  .slim-form-subheading{font-size:18px}
+  .slim-form-row{grid-template-columns:1fr;gap:10px}
+  .slim-submit-block button{width:100%!important}
 }
 </style>
 
+<script>
+window.REQUIRED_CODE_ERROR_MESSAGE = 'Please select a country code';
+window.LOCALE = 'en';
+window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "That doesn't look like a valid email address. Please check and try again.";
+window.REQUIRED_ERROR_MESSAGE = "Please enter your email address.";
+window.GENERIC_INVALID_MESSAGE = "That doesn't look like a valid email address. Please check and try again.";
+window.INVALID_NUMBER = "That doesn't look like a valid email address. Please check and try again.";
+window.INVALID_DATE = "Please enter a valid date.";
+window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
+window.translation = { common: { selectedList: '{quantity} list selected', selectedLists: '{quantity} lists selected', selectedOption: '{quantity} selected', selectedOptions: '{quantity} selected' } };
+var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
-<style id="mobile-actual-fix">
-@media (max-width: 700px) {
-  html, body { overflow-x:hidden; width:100%; }
-  .hero {
-    display:flex !important;
-    flex-direction:column !important;
-    min-height:auto !important;
-    height:auto !important;
-    padding-top:66px;
-    overflow:hidden;
-  }
-  .hero-image {
-    position:relative !important;
-    inset:auto !important;
-    width:100% !important;
-    height:56svh !important;
-    min-height:420px !important;
-    max-height:560px !important;
-    flex:none !important;
-    opacity:1 !important;
-    background-position:center top !important;
-  }
-  .hero-image:after {
-    background:linear-gradient(180deg,rgba(5,5,5,0) 55%,#050505 100%) !important;
-  }
-  .hero-copy {
-    position:relative !important;
-    z-index:3 !important;
-    width:100% !important;
-    max-width:none !important;
-    min-height:auto !important;
-    padding:20px 6vw 72px !important;
-    display:block !important;
-    margin:0 !important;
-  }
-  .kicker {
-    font-size:8px !important;
-    letter-spacing:.34em !important;
-    line-height:1.6 !important;
-    margin-bottom:20px !important;
-    color:var(--gold2) !important;
-  }
-  .hero-copy h1 {
-    font-size:clamp(48px,13.2vw,62px) !important;
-    line-height:.82 !important;
-    letter-spacing:-.055em !important;
-    white-space:normal !important;
-  }
-  .hero-copy h1 span { display:block !important; }
-  .hero-copy h1 .word-the { margin:0 !important; }
-  .hero-copy h1 .word-slim {
-    font-size:1.12em !important;
-    margin:-.02em 0 -.01em .08em !important;
-  }
-  .hero-copy h1 .word-experience { margin:0 !important; }
-  .hero-rule { width:70px !important; margin:26px 0 18px !important; }
-  .hero-description {
-    max-width:100% !important;
-    font-size:11px !important;
-    line-height:1.8 !important;
-  }
-  .hero-meta {
-    gap:20px !important;
-    margin-top:28px !important;
-    padding-top:18px !important;
-    max-width:100% !important;
-  }
-  .meta strong { font-size:21px !important; }
-  .meta span { font-size:7px !important; }
-  .cta-row {
-    flex-wrap:wrap !important;
-    margin-top:28px !important;
-  }
-  .hero-side, .hero-scroll { display:none !important; }
-  .video-section { padding:64px 6vw 76px !important; }
-  .video-head h2 { font-size:clamp(38px,10vw,52px) !important; }
-  .video-wrap { width:100% !important; }
+<style id="dynamic-tour-alert">
+.ticket-alert{position:fixed;top:76px;left:0;right:0;z-index:29;background:rgba(201,168,76,.97);color:#050505;border-bottom:1px solid rgba(255,255,255,.2);box-shadow:0 8px 28px rgba(0,0,0,.28)}
+.ticket-alert a{min-height:38px;padding:0 24px;display:flex;align-items:center;justify-content:center;gap:10px;font:10px "Courier New",monospace;letter-spacing:.18em;text-transform:uppercase;font-weight:bold}
+.ticket-alert-dot{width:7px;height:7px;border-radius:50%;background:#050505;box-shadow:0 0 0 3px rgba(5,5,5,.12);flex:0 0 auto}
+.ticket-alert-arrow{font-size:13px}
+@media(max-width:700px){.ticket-alert{top:64px}.ticket-alert a{min-height:42px;padding:0 14px;font-size:8px;letter-spacing:.12em;text-align:center}.header{height:64px;padding:0 18px}.nav{display:none}}
+</style>
+
+<style id="ticket-ticker">
+.ticket-ticker{position:fixed;top:76px;left:0;right:0;height:54px;z-index:29;background:#050505;border-bottom:2px solid #c9a84c;border-top:1px solid rgba(232,201,106,.45);overflow:hidden;display:flex;align-items:center;box-shadow:0 10px 34px rgba(0,0,0,.48)}
+.ticket-ticker-link{display:flex;align-items:center;width:max-content;min-width:max-content;color:#f1d77b;text-decoration:none;white-space:nowrap;font:800 15px/1 "Arial Narrow","Helvetica Neue",Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.ticket-ticker-label{position:relative;z-index:2;display:inline-flex;align-items:center;gap:10px;padding:0 26px;color:#050505;background:#e8c96a;height:54px;font:900 12px/1 "Arial Narrow","Helvetica Neue",Arial,sans-serif;letter-spacing:.15em;flex:0 0 auto;box-shadow:8px 0 18px rgba(0,0,0,.55)}
+.ticket-ticker-label .pulse{width:8px;height:8px;border-radius:50%;background:#050505;box-shadow:0 0 0 4px rgba(5,5,5,.15);animation:ticketPulse 1.2s ease-in-out infinite}
+.ticket-ticker-track{display:flex;align-items:center;gap:42px;padding-left:42px;animation:tickerMove 20s linear infinite}
+.ticket-ticker-track span{display:inline-block}
+.ticket-ticker-track b{color:#fff;font-size:17px}
+@keyframes tickerMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes ticketPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.45);opacity:.65}}
+body{padding-top:54px}
+@media(max-width:700px){
+ .ticket-ticker{top:64px;height:48px}
+ .ticket-ticker-label{height:48px;padding:0 15px;font-size:9px}
+ .ticket-ticker-link{font-size:12px;letter-spacing:.12em}
+ .ticket-ticker-track{gap:28px;padding-left:28px;animation-duration:15s}
+ body{padding-top:48px}
 }
 </style>
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CMF6SMWRWF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CMF6SMWRWF');
+</script>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1061305463203986');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1061305463203986&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel -->
+
 </head>
 <body>
 <header class="header">
   <a class="brand" href="#"><div class="brand-mark">S</div><div><div class="brand-title">The Slim Experience</div><div class="brand-sub">World Tour 2026</div></div></a>
   <nav class="nav"><a href="#experience">Experience</a><a href="#performance">Performance</a><a href="#tour">Tour</a><span class="live"><i class="dot"></i> Manila · Live Now</span></nav>
 </header>
+
+<div class="ticket-ticker" id="ticketTicker" aria-live="polite" hidden>
+  <a class="ticket-ticker-link" id="ticketTickerLink" href="#" target="_blank" rel="noopener noreferrer" aria-label="Tickets for the next Slim Experience show">
+    <span class="ticket-ticker-label"><span class="pulse"></span> NOW LIVE</span>
+    <span class="ticket-ticker-track" id="ticketTickerTrack"></span>
+  </a>
+</div>
 
 <main>
 <section class="hero">
@@ -317,7 +286,7 @@ h1{font-size:clamp(58px,7vw,112px);font-weight:400;line-height:.78;letter-spacin
     <div class="hero-rule"></div>
     <p class="hero-description">One artist. Twelve stops. A world built around the moments that happen after the lights go down. Welcome to The Slim Experience.</p>
     <div class="hero-meta"><div class="meta"><strong>12</strong><span>Stops</span></div><div class="meta"><strong>4</strong><span>Continents</span></div><div class="meta"><strong>01</strong><span>Universe</span></div></div>
-    <div class="cta-row"><a class="btn primary" href="#experience">Enter the Experience →</a><a class="btn" href="#tour">View Tour</a></div>
+    <div class="cta-row"><a class="btn primary" href="https://app.promotix.com/event/event-organizer/R-R-Entertainment?referrer=The-Slim-Experience-Tour-Manila-tickets" target="_blank" rel="noopener noreferrer">BUY TICKETS ↗</a><a class="btn" href="#tour">View Tour</a></div>
   </div>
   <div class="hero-side">Slim Carter · The Slim Experience · 2026</div><div class="hero-scroll">Scroll to explore ↓</div>
 </section>
@@ -327,6 +296,64 @@ h1{font-size:clamp(58px,7vw,112px);font-weight:400;line-height:.78;letter-spacin
 <section class="intro" id="experience">
   <div><div class="section-kicker">01 / The Experience</div><h2>Not just a show.<br><em>A world.</em></h2></div>
   <div class="intro-copy"><p>The Slim Experience World Tour turns every stop into its own chapter. From the first city to the final homecoming, every audience becomes part of the story.</p><div class="intro-note">Four continents · Twelve stops · One evolving collection of memories</div></div>
+</section>
+
+<section class="signup-section" id="updates">
+  <div class="signup-inner">
+    <div class="signup-copy">
+      <div class="section-kicker">Stay close</div>
+      <h2>Get closer<br><em>to Slim.</em></h2>
+      <p>Tour dates. Exclusive updates. Be the first to know what’s next.</p>
+    </div>
+    <div class="brevo-form-wrap">
+      <div id="sib-form-container" class="sib-form-container slim-brevo">
+        <div id="error-message" class="sib-form-message-panel slim-brevo-message slim-brevo-error" role="alert">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">Something went wrong. Please try again.</span>
+          </div>
+        </div>
+
+        <div id="success-message" class="sib-form-message-panel slim-brevo-message slim-brevo-success" role="status">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">You're on the list. Welcome to The Slim Experience.</span>
+          </div>
+        </div>
+
+        <form id="sib-form" method="POST" action="https://fbd694ce.sibforms.com/serve/MUIFAH9SzGrrIMnrHO2c3Tba5HiZWzDz4gBbt_ogGc717xZNhrxrGEawYCJOmmPQcEM0iVbh7ePoNbLgCA2j3wsjG_NbDa7QzPS22p7EG9R5spYejzgt_su5PGagOugKrAe69Lt-ORxdMgAWdz1EDMEfdMwGgblmJZrwmDu2OQLhqQqoBChyQSLZJbyeWxpfwnQidSWF-k3xlF2LHw==" data-type="subscription">
+          <div class="slim-form-heading">Stay close to Slim.</div>
+          <div class="slim-form-subheading">Tour dates. Exclusive updates. Be the first to know what's next.</div>
+
+          <div class="slim-form-row">
+            <div class="sib-input sib-form-block slim-email-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <label class="entry__label slim-hidden-label" for="EMAIL" data-required="*">Email address</label>
+                  <div class="entry__field">
+                    <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="email" value="" placeholder="ENTER YOUR EMAIL" data-required="true" required>
+                  </div>
+                </div>
+                <label class="entry__error entry__error--primary slim-field-error"></label>
+              </div>
+            </div>
+
+            <div class="sib-form-block slim-submit-block">
+              <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+                <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" aria-hidden="true">
+                  <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                </svg>
+                JOIN THE EXPERIENCE <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="slim-form-note">By joining, you'll receive tour dates and updates from The Slim Experience.</div>
+
+          <input type="text" name="email_address_check" value="" class="input--hidden" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="locale" value="en">
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="video-section" id="performance">
@@ -346,23 +373,62 @@ h1{font-size:clamp(58px,7vw,112px);font-weight:400;line-height:.78;letter-spacin
     <div class="city done"><div class="city-number">01</div><div class="city-name">London</div><div class="city-status">✓ Postcard Issued</div></div>
     <div class="city done"><div class="city-number">02</div><div class="city-name">Johannesburg</div><div class="city-status">✓ Postcard Issued</div></div>
     <div class="city done"><div class="city-number">03</div><div class="city-name">Lagos</div><div class="city-status">✓ Performance Featured</div></div>
-    <div class="city live"><div class="city-number">04</div><div class="city-name">Manila</div><div class="city-status">▶ Live · Postcard Incoming</div></div>
-    <div class="city"><div class="city-number">05</div><div class="city-name">Amsterdam</div><div class="city-status">Coming Soon</div></div>
-    <div class="city"><div class="city-number">06</div><div class="city-name">Berlin</div><div class="city-status">Coming Soon</div></div>
-    <div class="city"><div class="city-number">07</div><div class="city-name">São Paulo</div><div class="city-status">Coming Soon</div></div>
-    <div class="city"><div class="city-number">08</div><div class="city-name">Toronto</div><div class="city-status">Coming Soon</div></div>
-    <div class="city"><div class="city-number">09</div><div class="city-name">New York</div><div class="city-status">Coming Soon</div></div>
-    <div class="city"><div class="city-number">10</div><div class="city-name">Atlanta</div><div class="city-status">Coming Soon</div></div>
-    <div class="city"><div class="city-number">11</div><div class="city-name">Dallas</div><div class="city-status">Homecoming</div></div>
-    <div class="city"><div class="city-number">12</div><div class="city-name">Los Angeles</div><div class="city-status">Grand Finale</div></div>
+    <div class="city live" data-tour-city="Manila"><div class="city-number">04</div><div class="city-name">Manila</div><div class="city-status">▶ Live · Postcard Incoming</div></div>
+    <div class="city" data-tour-city="Sydney"><div class="city-number">05</div><div class="city-name">Sydney</div><div class="city-status">Coming Soon</div></div>
+    <div class="city" data-tour-city="Amsterdam"><div class="city-number">06</div><div class="city-name">Amsterdam</div><div class="city-status">Coming Soon</div></div>
+    <div class="city" data-tour-city="Berlin"><div class="city-number">07</div><div class="city-name">Berlin</div><div class="city-status">Coming Soon</div></div>
+    <div class="city" data-tour-city="Sao Paulo"><div class="city-number">08</div><div class="city-name">São Paulo</div><div class="city-status">Coming Soon</div></div>
+    <div class="city" data-tour-city="Toronto"><div class="city-number">09</div><div class="city-name">Toronto</div><div class="city-status">Coming Soon</div></div>
+    <div class="city" data-tour-city="New York City"><div class="city-number">10</div><div class="city-name">New York City</div><div class="city-status">Coming Soon</div></div>
+    <div class="city" data-tour-city="Dallas"><div class="city-number">11</div><div class="city-name">Dallas</div><div class="city-status">Homecoming</div></div>
+    <div class="city" data-tour-city="Los Angeles"><div class="city-number">12</div><div class="city-name">Los Angeles</div><div class="city-status">Grand Finale</div></div>
   </div></div>
 </section>
 </main>
 
-<footer class="footer"><div>The Slim Experience World Tour 2026</div><div>Presented by <span>@officialslim96</span> · Managed by <span>R&amp;R Entertainment PLLC</span></div><div>TheSlimExperience.com</div></footer>
+<footer class="footer"><div>The Slim Experience World Tour 2026</div><div>Presented by <span>@officialslim96</span> · Managed by <span>R&amp;R Entertainment PLLC</span></div><div>theslimexperience.com</div></footer>
 
 
+
+<script>
+(function(){
+  const TOUR_STOPS = [
+    { city:'Manila', date:'2026-10-04', label:'October 4, 2026', url:'https://app.promotix.com/events/details/The-Slim-Experience-Tour-Manila-tickets?referrer=organizer-page&organizer_id=R-R-Entertainment&org_event_id=The-Slim-Experience-Tour-Manila-tickets' },
+    { city:'Sydney', date:'2026-10-18', label:'October 18, 2026', url:'https://app.promotix.com/events/details/The-Slim-Experience-Tour-Sydney-tickets?referrer=organizer-page&organizer_id=R-R-Entertainment&org_event_id=The-Slim-Experience-Tour-Manila-tickets' },
+    { city:'Amsterdam', date:'2026-11-01', label:'November 1, 2026', url:'https://app.promotix.com/events/details/The-Slim-Experience-Tour-Amsterdam-tickets?referrer=organizer-page&organizer_id=R-R-Entertainment&org_event_id=The-Slim-Experience-Tour-Manila-tickets' },
+    { city:'Berlin', date:'2026-11-15', label:'November 15, 2026', url:'https://app.promotix.com/events/details/The-Slim-Experience-Tour-Berlin-tickets?referrer=organizer-page&organizer_id=R-R-Entertainment&org_event_id=The-Slim-Experience-Tour-Manila-tickets' },
+    { city:'Sao Paulo', date:'2026-11-29', label:'November 29, 2026', url:'https://app.promotix.com/events/details/The-Slim-Experience-Tour-Sao-Paulo-tickets?referrer=organizer-page&organizer_id=R-R-Entertainment&org_event_id=The-Slim-Experience-Tour-Manila-tickets' },
+    { city:'Toronto', date:'2026-12-13', label:'December 13, 2026', url:'https://app.promotix.com/events/details/The-Slim-Experience-Tour-Toronto-tickets?referrer=organizer-page&organizer_id=R-R-Entertainment&org_event_id=The-Slim-Experience-Tour-Manila-tickets' },
+    { city:'New York City', date:'2026-12-27', label:'December 27, 2026', url:'https://app.promotix.com/events/details/The-Slim-Experience-Tour-New-York-City-tickets?referrer=organizer-page&organizer_id=R-R-Entertainment&org_event_id=The-Slim-Experience-Tour-Manila-tickets' },
+    { city:'Dallas', date:'2027-01-03', label:'January 3, 2027', url:'https://app.promotix.com/events/details/The-Slim-Experience-Tour-Dallas-tickets?referrer=organizer-page&organizer_id=R-R-Entertainment&org_event_id=The-Slim-Experience-Tour-Manila-tickets' },
+    { city:'Los Angeles', date:'2027-01-10', label:'January 10, 2027', url:'https://app.promotix.com/events/details/The-Slim-Experience-Tour-Los-Angeles-tickets?referrer=organizer-page&organizer_id=R-R-Entertainment&org_event_id=The-Slim-Experience-Tour-Manila-tickets' }
+  ];
+  const d=new Date();
+  const today=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  const next=TOUR_STOPS.find(s=>s.date>=today);
+  const ticker=document.getElementById('ticketTicker');
+  const link=document.getElementById('ticketTickerLink');
+  const track=document.getElementById('ticketTickerTrack');
+  if(!ticker || !link || !track) return;
+  if(!next){ticker.hidden=true;return;}
+  link.href=next.url;
+  const message=next.city.toUpperCase()+'  ·  '+next.label.toUpperCase()+'  ·  TICKETS AVAILABLE NOW';
+  track.innerHTML=Array(6).fill('<span>'+message+'</span><b>✦</b>').join('');
+  ticker.hidden=false;
+  const live=document.querySelector('.nav .live');
+  if(live) live.innerHTML='<i class="dot"></i> '+next.city+' · Live Now';
+  const tourTop=document.querySelector('.tour-top p');
+  if(tourTop){ const idx=TOUR_STOPS.indexOf(next)+4; tourTop.textContent='Stop '+String(idx).padStart(2,'0')+' of 12 · '+next.city+' live now'; }
+  document.querySelectorAll('[data-tour-city]').forEach(card=>{
+    const city=card.getAttribute('data-tour-city');
+    card.classList.remove('live');
+    const status=card.querySelector('.city-status');
+    if(city===next.city){card.classList.add('live');if(status)status.textContent='▶ Live · Tickets Available';}
+  });
+})();
+</script>
 </body>
 </html>
+
 
 
